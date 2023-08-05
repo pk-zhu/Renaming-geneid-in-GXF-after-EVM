@@ -1,0 +1,11 @@
+chr01	Fh01
+chr02	Fh02
+chr03	Fh03
+chr04	Fh04
+chr05	Fh05
+chr06	Fh06
+chr07	Fh07
+chr08	Fh08
+chr09	Fh09
+chr10	Fh10
+chr11	Fh11
