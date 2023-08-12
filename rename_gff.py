@@ -30,7 +30,7 @@ def rename(args):
         genenum += args.addnum
         seqid = gene.seqid
 
-        genename = '{0}G{1:06}'.format(seqid2name[seqid],genenum)
+        genename = '{0}G{1:06}'.format(seqid2name[seqid],genenum) #希望基因有几位数，请修改这行
         f_out.write('{seqid}\t{source}\t{featuretype}\t{start}\t{end}\t{score}\t{strand}\t{frame}\tID={geneid}\n'.format(seqid=gene.seqid, source=gene.source, featuretype=gene.featuretype, start=gene.start, end=gene.end, score=gene.score, strand=gene.strand, frame=gene.frame, geneid=genename))
 
         for t,mRNA in enumerate(db.children(gene,featuretype="mRNA",order_by=('seqid','start','end'))):
