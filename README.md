@@ -24,6 +24,10 @@ grep -v scaffold fh.gff3 > fh_clean.gff3
 ```
 python rename_gff.py -g fh_clean.gff3 -c bed.txt
 ```
+最后，发现gene和mRNA没有name属性，可以用脚本给它加上。
+```
+python add_name.py -i input.gff3 -o output.gff3
+```
 # 此外
 因为Fh这个物种原有注释文件中的染色体号是'Hic_asm_*'这种格式，因此在配置bed.txt前
 
