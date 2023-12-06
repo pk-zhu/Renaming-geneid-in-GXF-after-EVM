@@ -33,7 +33,10 @@ python add_name.py -i input.gff3 -o output.gff3
 nohup gff3_QC -g sample.gff3 -f genome.fa -o sample.qc -s statistic.txt >qc.log 2>&1 &
 nohup gff3_fix -qc_r sample.qc -g sample.gff3 -og corrected.gff3 >fix.log 2>&1 &
 ```
-
+最后不放心还可以sort一下,虽然rename_gff.py有sort效果
+```
+gff3_sort -g sample.gff3 -og sorted.gff3
+```
 # 此外
 因为Fh这个物种原有注释文件中的染色体号是'Hic_asm_*'这种格式，因此在配置bed.txt前
 
