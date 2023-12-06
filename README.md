@@ -28,6 +28,12 @@ python rename_gff.py -g fh_clean.gff3 -c bed.txt
 ```
 python add_name.py -i input.gff3 -o output.gff3
 ```
+12.07.23新增：修复GFF注释错误
+```
+nohup gff3_QC -g sample.gff3 -f genome.fa -o sample.qc -s statistic.txt >qc.log 2>&1 &
+nohup gff3_fix -qc_r sample.qc -g sample.gff3 -og corrected.gff3 >fix.log 2>&1 &
+```
+
 # 此外
 因为Fh这个物种原有注释文件中的染色体号是'Hic_asm_*'这种格式，因此在配置bed.txt前
 
